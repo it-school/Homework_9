@@ -2,9 +2,26 @@ package com.company.Task_2;
 
 
 public class DataBase implements IDataBase {
-    private User[] users = new User[0];
-    private int id = 0;
+    private User[] users;
+    private int id;
 
+    public DataBase()
+    {
+        User[] users = new User[0];
+        int id = 0;
+    }
+    
+
+    public DataBase(int n)
+    {
+        User[] users = new User[n];
+        int id = 0;
+        
+        for (int i = 0; i < this.users.length; i++) {
+            temp[i] = new User(this.id++, "", "", "");
+    }
+    
+    
     @Override
     public void addUser(String login, String password, String fullName) {
         this.id++;
